@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+$color: #FF2022;
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Libre+Baskerville:wght@700&family=Roboto+Condensed:wght@300&display=swap');
+@import './_newarival.scss';
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+@mixin display($display: flex, $justify: center, $align: center, $flex: row) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex;
+}
+
+body {
+    background-color: black;
+
+    .border {
+        height: 100vh;
+        // border: 2px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #161616;
+        font-size: 16px;
+
+        @media (max-width:950px) {
+            font-size: 14px;
+        }
+
+        @media (max-width:1144px) {
+            font-size: 14px;
+        }
+
+        @media (max-width:970px) {
+            font-size: 12px;
+        }
+
+        @media (max-width:837px) {
+            font-size: 8px;
+            height: 80vh;
+        }
+
+        .left {
+            width: 60%;
+            height: 100%;
+            // border: 1px solid white;
+            @include display($flex: column);
+            text-transform: capitalize;
+            font-family: 'Libre Baskerville', serif;
+
+            .firstletter {
+                font-size: 5em;
+                font-weight: 600;
+                color: $color;
+                margin: 20px;
+
+                @media(max-width:583px) {
+                    font-size: 3em;
+                }
+            }
+
+            .secondletter {
+                font-size: 1.5em;
+
+                color: white;
+                margin: 20px;
+                font-family: 'Abel', sans-serif;
+            }
+
+            .shopnow {
+                margin: 20px;
+                overflow: hidden;
+                width: 160px;
+                @include display;
+                height: 60px;
+                position: relative;
+                border: 1px solid $color;
+                border-radius: 6px;
+                transition: 1.2s;
+                cursor: pointer;
+
+                .para {
+                    font-size: 1.2em;
+                    color: white;
+                    font-weight: 550;
+                    z-index: 2;
+                }
+
+
+                .slidediv {
+                    border-radius: 6px;
+                    width: 160px;
+                    height: 60px;
+                    transition: 1.2s;
+                    background-color: #FF2022;
+                    position: absolute;
+                    left: -160px;
+                    z-index: 0;
+                    opacity: 0.7;
+                }
+
+                &:hover {
+                    .slidediv {
+                        left: 0px
+                    }
+                }
+            }
+        }
+
+        .right {
+            width: 35%;
+            height: 100%;
+            // border: 1px solid white;
+            @include display;
+
+            .img1 {
+                height: 95%;
+                width: 60%;
+                object-fit: contain;
+            }
+        }
+
+        .navbar {
+            top: 2px;
+            position: fixed;
+            width: 90vw;
+            height: 80px;
+            // border: 1px solid white;
+            @include display($justify: space-between);
+            background-color: black;
+
+            .first {
+                width: 20%;
+                height: 90%;
+                // border: 2px solid white;
+                @include display($justify: space-evenly);
+
+                .time {
+                    padding: 10px;
+                    font-size: 1.9em;
+                    font-weight: 550;
+                    color: white;
+                }
+
+                .zone {
+                    padding: 10px;
+                    font-size: 1.9em;
+                    font-weight: 550;
+                    color: $color;
+                }
+
+                @media (max-width:950px) {
+                    width: 30%;
+                }
+
+                @media (max-width:490px) {
+                    width: 40%;
+                }
+            }
+
+            .second {
+                width: 40%;
+                height: 90%;
+                // border: 2px solid white;
+                @include display($justify: space-evenly);
+                text-transform: capitalize;
+
+                .txt1 {
+                    a {
+                        text-decoration: none;
+                        color: aliceblue;
+                        font-size: 1.2em;
+
+                        &:hover {
+                            color: $color;
+                        }
+                    }
+                }
+
+                @media(max-width:990px) {
+                    display: none;
+                }
+
+            }
+
+            .third {
+                width: 10%;
+                height: 90%;
+                // border: 2px solid white;
+
+                display: none;
+
+                .bar {
+                    cursor: pointer;
+                    font-size: 2em;
+                    color: $color;
+                }
+
+                @media(max-width:990px) {
+                    @include display;
+                }
+
+                @media (max-width:490px) {
+                    width: 20%;
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+$white: white;
+$color: #FF2022;
+
+@mixin display($display: flex, $justify: center, $align: center, $flex: row) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex;
+}
+
+.newarival {
+    width: 100vw;
+    // border: 1px solid white;
+    @include display($flex: column);
+
+    .div1 {
+        font-size: 2em;
+        font-weight: 600;
+        color: white;
+        align-self: flex-start;
+        margin: 5px 20px;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .arrivals {
+        width: 85%;
+        // height: 85%;
+        // border: 1px solid white;
+        @include display;
+        flex-wrap: wrap;
+
+        .thermo {
+            margin: 20px 10px;
+            width: 31%;
+            height: 550px;
+            // border: 2px solid white;
+            @include display($flex: column);
+
+            .termo1 {
+                width: 100%;
+                height: 75%;
+                background-image: url('./src/new_product1.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 10px;
+
+                @media(max-width:849px) {
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .termo2 {
+                color: $white;
+                font-size: 1.4em;
+                font-weight: 550;
+                margin: 10px;
+            }
+
+            .termo3 {
+                margin: 10px;
+                color: $color;
+                font-size: 1em;
+                font-weight: 550;
+            }
+
+
+            @media (max-width:1012px) {
+                width: 40%;
+            }
+
+            @media (max-width:850px) {
+                width: 80%;
+                height: 500px;
+            }
+        }
+
+        .ball {
+            margin: 20px 10px;
+            width: 31%;
+            height: 550px;
+            // border: 2px solid white;
+            @include display($flex: column);
+
+            @media (max-width:1012px) {
+                width: 40%;
+            }
+
+            @media (max-width:850px) {
+                width: 80%;
+                height: 500px;
+            }
+
+
+
+            .termo1 {
+                width: 100%;
+                height: 75%;
+                background-image: url('./src/new_product2.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 10px;
+
+
+                @media(max-width:849px) {
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .termo2 {
+                color: $white;
+                font-size: 1.4em;
+                font-weight: 550;
+                margin: 10px;
+            }
+
+            .termo3 {
+                margin: 10px;
+                color: $color;
+                font-size: 1em;
+                font-weight: 550;
+            }
+
+
+        }
+
+        .etip {
+            margin: 20px 10px;
+            width: 31%;
+            height: 550px;
+            // border: 2px solid white;
+            @include display($flex: column);
+
+            @media (max-width:1012px) {
+                width: 40%;
+
+            }
+
+            @media (max-width:850px) {
+                width: 80%;
+                height: 500px;
+            }
+
+
+            .termo1 {
+                width: 100%;
+                height: 75%;
+                background-image: url('./src/new_product3.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin: 10px;
+
+                @media(max-width:849px) {
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            .termo2 {
+                color: $white;
+                font-size: 1.4em;
+                font-weight: 550;
+                margin: 10px;
+            }
+
+            .termo3 {
+                margin: 10px;
+                color: $color;
+                font-size: 1em;
+                font-weight: 550;
+            }
+
+        }
+    }
+}
